@@ -1,4 +1,4 @@
-package de.sulai.transform
+package de.sulai.readout
 
 import org.junit.Test
 

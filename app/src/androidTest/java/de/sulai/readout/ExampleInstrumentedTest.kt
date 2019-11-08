@@ -1,4 +1,4 @@
-package de.sulai.transform
+package de.sulai.readout
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4

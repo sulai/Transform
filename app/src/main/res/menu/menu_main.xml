@@ -1,9 +1,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
-      tools:context="de.sulai.transform.MainActivity">
-    <item android:id="@+id/action_settings"
-          android:title="@string/action_settings"
-          android:orderInCategory="100"
-          app:showAsAction="never"/>
+      tools:context="de.sulai.readout.MainActivity">
+
+    <item android:id="@+id/action_de"
+            android:title="German"
+            android:orderInCategory="100"
+            app:showAsAction="never"/>
+
+    <item android:id="@+id/action_en"
+            android:title="English"
+            android:orderInCategory="100"
+            app:showAsAction="never"/>
+
+    <item android:id="@+id/action_es"
+            android:title="Spanish"
+            android:orderInCategory="100"
+            app:showAsAction="never"/>
+
 </menu>

@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">Transform</string>
+    <string name="app_name">Read out</string>
     <string name="action_settings">Settings</string>
-    <string name="regex">regex</string>
-    <string name="replace">replace</string>
-    <string name="regexenerator">It is recommended to create the regex using Regexenerator app and use \"send\" to send
-        the search/replace data here.
+    <string name="explanation">
+        Reading the following text.
     </string>
 </resources>
