@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         textToSpeech?.stop()
         val wholeText = edit_text.text.toString()
         for (chunk in wholeText.split("WAIT:")) {
-            val matcher = Pattern.compile("^(\\d+)(.+)").matcher(chunk)
+            val matcher = Pattern.compile("^(\\d+)(.+)", Pattern.DOTALL).matcher(chunk)
             if (matcher.find()) {
                 val time = matcher.group(1).toLong()*1000
                 val text = matcher.group(2)
