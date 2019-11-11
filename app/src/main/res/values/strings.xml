@@ -3,5 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="explanation">
         Reading the following text. You can add WAIT:20 anywhere to add silence for 20 Seconds.
+        \nThe screen will stay on as long as the app is in foreground.
     </string>
 </resources>

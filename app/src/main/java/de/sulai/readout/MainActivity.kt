@@ -1,13 +1,13 @@
 package de.sulai.readout
 
-import android.content.*
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity;
-
-import kotlinx.android.synthetic.main.activity_main.*
-import android.widget.TextView
-import kotlinx.android.synthetic.main.content_main.*
 import android.speech.tts.TextToSpeech
+import android.view.WindowManager
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 import java.util.*
 import java.util.regex.Pattern
 
@@ -21,8 +21,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
         fab.setOnClickListener { view ->
-            if(textToSpeech?.isSpeaking==true)
+            if( textToSpeech?.isSpeaking==true )
                 textToSpeech?.stop()
             else
                 startReading()
@@ -70,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         textToSpeech?.stop()
         val wholeText = edit_text.text.toString()
         for (chunk in wholeText.split("WAIT:")) {
-            val matcher = Pattern.compile("^(\\d+)(.+)", Pattern.DOTALL).matcher(chunk)
+            val matcher = Pattern.compile("^(\\d+)(.*)", Pattern.DOTALL).matcher(chunk)
             if (matcher.find()) {
                 val time = matcher.group(1).toLong()*1000
                 val text = matcher.group(2)
